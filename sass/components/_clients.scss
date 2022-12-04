@@ -1,0 +1,31 @@
+.clients {
+	display: flex;
+	align-items: center;
+	gap: $indent;
+}
+
+.clients__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 170px;
+	height: 92px;
+
+	color: $icons;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	transition: color $timing-function, border $timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent;
+		border: 1px solid $accent;
+	}
+}
+
+.clients__icon {
+	display: block;
+	fill: currentColor;
+}

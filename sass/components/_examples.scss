@@ -1,0 +1,38 @@
+.section--works {
+	padding-top: 0;
+}
+
+.examples {
+	display: flex;
+	gap: 30px;
+}
+
+.examples__item {
+	position: relative;
+}
+
+.examples__case {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	width: 100%;
+	min-height: 70px;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgba(47, 48, 58, 0.8);
+
+	z-index: 10;
+}
+
+.examples__title {
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: $white;
+}

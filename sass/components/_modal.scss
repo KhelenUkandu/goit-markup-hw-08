@@ -1,0 +1,207 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: $backdrop;
+	opacity: 1;
+	transition: opacity $timing-function, visibility $timing-function;
+
+	z-index: 100;
+}
+
+.backdrop.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+
+	width: 528px;
+	min-height: 581px;
+	padding: 40px;
+
+	background-color: $white;
+
+	transition: transform $timing-function;
+
+	z-index: 1000;
+}
+
+.close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	background-color: $white;
+
+	transition: color $timing-function;
+
+	cursor: pointer;
+
+	&:hover {
+		color: $accent;
+	}
+}
+
+.close__icon {
+	fill: currentColor;
+}
+
+.container--form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modal__label {
+	display: inline-block;
+	font-size: 20px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+	color: $second-text-color;
+	margin-bottom: 12px;
+}
+
+.modalform {
+	display: flex;
+	flex-direction: column;
+}
+
+.modalform__part {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.modalform__wrapper {
+	position: relative;
+
+	&:focus-within > .modalform__icon {
+		fill: $accent;
+	}
+}
+
+.modalform__label {
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: $primary-text-color;
+	margin-bottom: 4px;
+}
+
+.modalform__icon {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+
+	fill: currentColor;
+
+	transition: fill $timing-function;
+}
+
+.modalform__field {
+	width: 448px;
+	height: 40px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	padding: 12px 42px;
+	font-family: inherit;
+	font-size: inherit;
+
+	outline: 1px solid transparent;
+
+	transition: outline $timing-function;
+
+	&:focus {
+		outline: 1px solid $accent;
+	}
+}
+
+.modalform__textarea {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.modalform__field--textarea {
+	width: 448px;
+	height: 120px;
+
+	padding-left: 16px;
+	padding-right: 16px;
+	resize: none;
+
+	&::placeholder {
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.01em;
+		color: rgba(117, 117, 117, 0.5);
+	}
+}
+
+.modalform__agreement {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	padding-left: 12px;
+	margin-bottom: 30px;
+}
+
+.modalform__checkbox {
+	appearance: none;
+	width: 16px;
+	height: 15px;
+
+	outline: 2px solid $second-text-color;
+	outline-offset: -2px;
+
+	border-radius: 2px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 0;
+	background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
+
+	transition: outline-color $timing-function, background-color $timing-function;
+
+	&:checked {
+		outline-color: $accent;
+		background-color: $accent;
+		background-size: 11px 8px;
+	}
+}
+
+.modalform__text {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: $primary-text-color;
+	user-select: none;
+}
+
+.modalform__link {
+	color: $accent;
+	text-underline-offset: 3px;
+}
