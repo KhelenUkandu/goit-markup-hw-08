@@ -9,7 +9,7 @@
 	opacity: 1;
 	transition: opacity $timing-function, visibility $timing-function;
 
-	z-index: 100;
+	z-index: 10000;
 }
 
 .backdrop.is-hidden {

@@ -1,23 +1,25 @@
 .features {
 	display: flex;
+	// flex-direction: column;
 	gap: $indent;
+	flex-wrap: wrap;
+}
+
+.features__item {
+	$items: 1;
+	flex-basis: calc((100% - (#{$items} -1) * #{$indent}) / #{$items});
 }
 
 .features__container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 270px;
+	width: 100%;
 	height: 120px;
 
 	margin-bottom: 30px;
 
 	background-color: $third-bcg-color;
-}
-
-.features__item {
-	--items: 4;
-	flex-basis: calc((100%- (#{$items}-1) *#{$indent}) /#{$items});
 }
 
 .features__title {
@@ -27,14 +29,33 @@
 
 	font-size: 14px;
 	line-height: 1.14;
+	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 }
 
 .features__description {
-	width: 270px;
+	width: 100%;
 
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+	.features__item {
+		$items: 2;
+		flex-basis: calc((100% - (#{$items} - 1) * #{$indent}) / #{$items});
+	}
+
+	.features__title {
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.features__item {
+		$items: 4;
+		flex-basis: calc((100% - (#{$items} - 1) * #{$indent}) / #{$items});
+	}
 }
