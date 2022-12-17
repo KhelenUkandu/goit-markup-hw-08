@@ -107,8 +107,8 @@
 
 	.flex {
 		display: flex;
-		gap: 70px;
 		align-items: baseline;
+		justify-content: space-between;
 	}
 
 	.flex__footer--tablet {
@@ -120,6 +120,11 @@
 
 	.footer__text {
 		text-align: left;
+	}
+
+	.footer-form-container {
+		display: block;
+		margin-left: auto;
 	}
 
 	.form {

@@ -56,7 +56,7 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	// display: none;
+	display: flex;
 	padding: 48px 40px;
 	background-color: $white;
 	z-index: 1000;
@@ -66,16 +66,9 @@
 	transition: transform 500ms ease-in-out, opacity $timing-function 250ms;
 
 	&.is-open {
-		// display: block;
 		opacity: 1;
 		transform: translateX(0);
 	}
-
-	// @media screen and (min-width: 480px) {
-	// 	width: 480px;
-	// 	margin-left: auto;
-	// 	margin-right: auto;
-	// }
 
 	.menu-toggle {
 		position: absolute;
@@ -96,12 +89,16 @@
 }
 
 .mobile-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+
 	font-weight: 500;
 	line-height: 1.17;
 	letter-spacing: 0.02em;
 
 	.nav {
-		margin-bottom: 306px;
+		margin-bottom: auto;
 	}
 
 	.nav__list {
@@ -137,7 +134,7 @@
 
 	.mail {
 		display: block;
-		margin-bottom: 64px;
+		// margin-bottom: 64px;
 
 		font-size: 24px;
 

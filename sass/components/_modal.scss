@@ -28,8 +28,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 
-	width: 528px;
-	min-height: 581px;
+	width: 450px;
+	min-height: 609px;
 	padding: 40px;
 
 	background-color: $white;
@@ -76,6 +76,7 @@
 	display: inline-block;
 	font-size: 20px;
 	line-height: 1.15;
+	text-align: center;
 	letter-spacing: 0.03em;
 	color: $second-text-color;
 	margin-bottom: 12px;
@@ -120,7 +121,7 @@
 }
 
 .modalform__field {
-	width: 448px;
+	width: 370px;
 	height: 40px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
@@ -145,7 +146,7 @@
 }
 
 .modalform__field--textarea {
-	width: 448px;
+	width: 370px;
 	height: 120px;
 
 	padding-left: 16px;
@@ -194,7 +195,7 @@
 }
 
 .modalform__text {
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: $primary-text-color;
@@ -204,4 +205,20 @@
 .modalform__link {
 	color: $accent;
 	text-underline-offset: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+	.modal {
+		width: 528px;
+		min-height: 581px;
+	}
+
+	.modalform__field,
+	.modalform__field--textarea {
+		width: 450px;
+	}
+
+	.modalform__text {
+		font-size: 14px;
+	}
 }
